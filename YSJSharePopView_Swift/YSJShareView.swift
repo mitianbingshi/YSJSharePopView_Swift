@@ -21,7 +21,6 @@ class ShareBtn: UIButton {
         
         nameLabel = UILabel.init(frame: CGRectMake(0, 55, 60, 20))
         nameLabel.textAlignment = NSTextAlignment.Center
-        nameLabel.backgroundColor = UIColor.blackColor()
         self.addSubview(nameLabel)
     }
     
@@ -55,7 +54,6 @@ class YSJShareView: UIView {
         super.init(frame: frame)
         self.backgroundColor = UIColor.whiteColor()
         _shareView = UIView.init(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 240))
-        _shareView.backgroundColor = UIColor.greenColor()
         self.addSubview(_shareView)
         
         _shareViewBackground = UIView.init(frame: UIScreen.mainScreen().bounds)
@@ -81,8 +79,7 @@ class YSJShareView: UIView {
         let shareBtn = ShareBtn.init(type: UIButtonType.Custom)
         shareBtn.frame = CGRectMake(0 + _sepWidth, 10, 60, 80)
         shareBtn.nameLabel.text = title
-        shareBtn.nameLabel.backgroundColor = UIColor.blueColor()
-        shareBtn.iconImageView.backgroundColor = UIColor.redColor()
+        shareBtn.iconImageView.image = withImage
         shareBtn.addTarget(self, action: #selector(YSJShareView.share(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         shareBtn.tag = 1000+_count
         if _count > 4{

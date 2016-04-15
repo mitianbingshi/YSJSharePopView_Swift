@@ -17,14 +17,11 @@ class ViewController: UIViewController {
         
         shareView = YSJShareView.init(frame: CGRectMake(0, UIScreen.mainScreen().bounds.height - 240, UIScreen.mainScreen().bounds.width, 240))
         shareView._delegate = self
-        shareView.addItem("1111", withImage: UIImage())
-        shareView.addItem("1111", withImage: UIImage())
-        shareView.addItem("1111", withImage: UIImage())
-        shareView.addItem("1111", withImage: UIImage())
-        shareView.addItem("1111", withImage: UIImage())
-        shareView.addItem("1111", withImage: UIImage())
-        shareView.addItem("1111", withImage: UIImage())
-        shareView.addItem("1111", withImage: UIImage())
+        shareView.addItem("1111", withImage: UIImage(named: "share_qq")!)
+        shareView.addItem("1111", withImage: UIImage(named: "share_friend")!)
+        shareView.addItem("1111", withImage: UIImage(named: "share_weibo")!)
+        shareView.addItem("1111", withImage: UIImage(named: "share_wechat")!)
+        shareView.addItem("1111", withImage: UIImage(named: "share_zone")!)
         
         let btn = UIButton.init(type: UIButtonType.RoundedRect)
         btn.setTitle("show", forState: UIControlState.Normal)
